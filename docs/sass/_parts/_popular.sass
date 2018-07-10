@@ -1,0 +1,133 @@
+.products
+	+row-flex()
+	justify-content: center
+
+
+	&__more
+		+col()
+		+size(12)
+		+row-flex()
+		justify-content: center
+
+.product
+	+col()
+	+size(3)
+	+size-md(6)
+	+size-sm(8)
+	+size-xs(12)
+	position: relative
+	cursor: pointer
+	transition: .5s
+
+
+	&:hover
+		transform: scale(1.1)
+		box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.1)
+
+	&:hover &__overlay
+		opacity: 1
+
+	&:hover .shadow
+		opacity: 1
+
+	&__img
+		width: auto
+
+		&--4
+			width: 100%
+
+			+md(width, auto)
+
+	&__overlay
+		position: absolute
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		opacity: 0
+		transition: .5s
+
+		+md(opacity, 1)
+		
+		top: 0
+		left: 0
+
+
+	&__name,
+	&__price,
+	&__icons
+		width: 100%
+		font-weight: bold
+		font-size: 22px
+		text-align: right
+		padding-right: 15px
+
+		&--left
+			padding-right: 0
+			padding-left: 15px
+			text-align: left
+
+
+	
+	&__icons
+		display: flex
+
+		&--left
+			text-align: left
+		
+.cip-heart-empty,
+.cip-basket--pop
+	border: 1px solid #6B6B6B
+	padding: 0 10px
+	font-size: 20px
+	cursor: pointer
+	background: #fff
+	transition: .5s
+
+	&:hover
+		background: #000
+		color: #fff
+
+.cip-basket--pop
+	border-left: none
+.cip-heart-empty
+	margin-left: auto
+.cip-basket--left
+	margin-right: auto
+.cip-heart-empty--left
+	margin: 0
+
+
+
+.shadow
+	width: 70px
+	height: 5px
+	background: $grey
+	border-radius: 50%
+	box-shadow: 0 0 20px 10px $grey
+	opacity: 0
+	transition: .5s
+	
+
+	&--1
+		margin: 30px 0 30px 80px
+
+
+	&--2
+		margin: 30px 0 30px 20px
+
+	&--3
+		margin: 30px 0 0 0
+
+	&--4
+		margin: 30px 0 30px 100px
+
+
+
+.productsMore
+	margin: 55px auto 125px
+	padding: 15px 30px
+	position: relative
+	z-index: 100

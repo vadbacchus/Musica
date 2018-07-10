@@ -1,0 +1,234 @@
+//GLOBALS
+
+.wrapper
+	+wrapper()
+
+
+ul, li
+	list-style: none
+	padding: 0
+	margin: 0
+
+a
+	text-decoration: none
+	color: #000
+
+	&:hover
+		color: #000
+		text-decoration: none
+
+
+img
+	width: 100%
+
+
+//section styles
+section,
+header,
+footer
+	position: relative
+	overflow: hidden
+
+
+//cirlce styles
+
+.circle
+	position: absolute
+	animation: floating 5s ease-in-out infinite alternate
+	z-index: 99
+	+xs(animation, none)
+
+	
+
+	&--yellowBig
+		width: 180px
+		height: 180px
+		border-radius: 50%
+		border: 40px solid $yellow
+		animation: floating 5s 1s ease-in-out infinite alternate
+		+xs(animation, none)
+
+		&.posHeader
+			left: 300px
+			top: -110px
+
+	&--yellowSmall
+		width: 130px
+		height: 130px
+		border-radius: 50%
+		border: 30px solid $yellow
+		animation: floating 5s .5s ease-in-out  infinite alternate
+		+xs(animation, none)
+
+		&.posService
+			top: 116px
+			right: 25px
+
+		&.posColl
+			bottom: 160px
+			right: 15px
+
+		&.posPop
+			top: 66px
+			left: -50px
+
+
+
+	&--green
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		border: 35px solid $green
+		animation: floating 5s 2s ease-in-out infinite alternate
+		+xs(animation, none)
+
+		&.posHeader
+			top: 135px
+			left: -50px
+
+		&.posPop
+			top: 66px
+			left: 422px
+
+		&.posBlog
+			top: 186px
+			right: -75px
+			opacity: .7
+
+	&--turquoiseSmall
+		width: 130px
+		height: 130px
+		border-radius: 50%
+		border: 30px solid $t
+		animation: floating 5s .5s ease-in-out infinite alternate
+		+xs(animation, none)
+
+		&.posHeader
+			top: 345px
+			left: 638px
+
+		&.posService
+			top: 25px
+			left: -65px
+
+		&.posBlog
+			bottom: 65px
+			right: 500px
+			opacity: .7
+
+	&--turquoiseBig
+		width: 171px
+		height: 171px
+		border: 30px solid $t
+		border-radius: 50%
+		
+		&.posColl
+			left: 30px
+			top: 160px
+
+	&--greySmall
+		width: 130px
+		height: 130px
+		border-radius: 50%
+		border: 30px solid $grey
+
+		&.posHeader
+			bottom: 96px
+			right: -65px
+
+	&--greyBig
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		border: 30px solid $grey
+		animation: floating 5s 1.5s ease-in-out infinite alternate
+		+xs(animation, none)
+
+		&.posPop
+			top: 186px
+			right: -50px
+
+		&.posAb
+			top: 25px
+			right: 0
+
+		&.posBlog
+			top: 186px
+			left: -75px
+			opacity: .7
+
+		&.posFoo
+			top: 15px
+			right: -75px
+
+	&--yellowLite
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		border: 30px solid #FFFCCB
+
+		&.posPop
+			bottom: 66px
+			left: -50px
+
+		&.posAb
+			top: 50px
+			left: -75px
+
+//section titles
+
+
+.sectionTitles
+	text-align: center
+	font-weight: bold
+	font-size: 46px
+	padding: 100px 0 60px 0
+	position: relative
+	z-index: 100
+
+//blueBtns
+
+.blueBtns
+	background: $accent
+	color: #fff
+	font-weight: bold
+	text-transform: uppercase
+	text-align: center
+	border-radius: 3px
+	transition: .5s
+
+	&:hover
+			
+		box-shadow: 0px 15px 34px 6px rgba(73, 51, 242, 0.22)
+
+
+//styles for service and about sections
+
+.sameBlock
+	+row-flex()
+	justify-content: center
+	padding-bottom: 10px
+
+	&__description,
+	&__img
+
+		+col()
+		+size(6)
+		+size-md(8)
+		+size-sm(10)
+		+size-xs(12)
+
+	&__title
+		font-size: 40px
+		font-weight: bold
+
+		+xs(font-size, 25px)
+
+	&__link
+		width: 170px
+		padding: 15px 30px
+		margin: 25px 0
+		display: flex
+		
+
+		+xs(margin, 25px auto)
